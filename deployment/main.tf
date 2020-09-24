@@ -3,11 +3,12 @@ provider "vra7" {
   password = var.vra_password
   tenant   = var.vra_tenant
   host     = var.vra_host
+  insecure = true
 }
 
 resource "vra7_deployment" "this" {
   count             = 1
-  catalog_item_name = "CentOS 8.0 x64"
+  catalog_item_name = "Ubuntu 20.04 x64"
   description       = "this description"
   reasons           = "this reason"
   lease_days        = 10

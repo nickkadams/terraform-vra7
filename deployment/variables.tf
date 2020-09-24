@@ -9,6 +9,7 @@ variable "vra_password" {
 }
 
 variable "vra_tenant" {
+  default     = "vsphere.local"
   description = "vRA7 tenant"
   type        = string
 }
